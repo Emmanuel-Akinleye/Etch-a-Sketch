@@ -8,21 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="flex-container">
-        <div class="title"><h1>Etch-a-Sketch</h1></div>
-        <div class="content"></div>
-        <div class="board"></div>
-        <div class="buttons">
-            <button>Black</button>
-            <button>White</button>
-            <button>Random</button>
-            <button>Reset</button>
+    <section>
+        <div class="flex-container">
+            <div class="title"><h1>Etch-a-Sketch</h1></div>
+            <div class="mode">Mode: Colouring</div>
+            <div class="content"></div>
+            <div class="board"></div>
+            <div class="buttons">
+                <button onclick="changeColour('black')">Black</button>
+                <button onclick="changeColour('white')">Eraser</button>
+                <button onclick="changeColour('blue')">Blue</button>
+                <button onclick="changeColour('red')">Red</button>
+                <button onclick="changeColour('green')">Green</button>
+                <button onclick="changeColour('random')">Random</button>  
+                <button onclick="reset()">Reset</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
+                <button>Set Size</button>
+            </div>
+            <div class="error">
+                Input must be between 2 and 100
+            </div>
         </div>
-        <div>
-            <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">
-            <button>Set Size</button>
-        </div>
-    </div>
+    </section>
     
 </body>
 <script src="app.js"></script>
